@@ -13,6 +13,8 @@ fun main() {
             }
         }
 
+        allElfCapacities.add(currentElfCapacity)
+
         allElfCapacities.sortDescending()
 
         return allElfCapacities
@@ -34,7 +36,14 @@ fun main() {
     }
 
     val input = readInput("Day01")
+    val testInput = readInput("Day01_test")
 
+
+    part1(testInput).println()
+    check(part1(testInput) == 24000)
     part1(input).println()
+
+    part2(testInput).println()
+    check(part2(testInput) == 45000)
     part2(input).println()
 }
