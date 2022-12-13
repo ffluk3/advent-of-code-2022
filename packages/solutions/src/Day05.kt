@@ -48,7 +48,7 @@ class CrateColumns {
 
     private fun placeBlock(index: Int, contents: Char) {
         if (columns[index] == null) {
-            columns[index] = ArrayDeque<Char>()
+            columns[index] = ArrayDeque()
         }
 
         columns[index]!!.addFirst(contents)
@@ -70,7 +70,7 @@ class CrateColumns {
 fun main() {
 
     fun part1(input: List<String>): String {
-        val crateColumns = CrateColumns();
+        val crateColumns = CrateColumns()
         var setupEndIndex: Int = 0
         for (i in input.indices) {
             if (setupEndIndex in 1 until i) {
@@ -92,7 +92,7 @@ fun main() {
     }
 
     fun part2(input: List<String>): String {
-        val crateColumns = CrateColumns();
+        val crateColumns = CrateColumns()
         var setupEndIndex: Int = 0
         for (i in input.indices) {
             if (setupEndIndex in 1 until i) {

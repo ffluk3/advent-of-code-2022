@@ -7,10 +7,6 @@ class File {
         this.size = size
     }
 
-    fun getName(): String {
-        return this.name
-    }
-
     fun getSize(): Int {
         return this.size
     }
@@ -127,9 +123,9 @@ fun main() {
                 val regex = Regex("\\\$ cd (.*)")
                 val result = regex.find(command)
                 val (targetDir) = result!!.destructured
-                println(" changing directory ${targetDir}")
+                println(" changing directory $targetDir")
                 fileSystem.changeDirectory(targetDir)
-                i++;
+                i++
             } else if (command.contains("ls")) {
                 println(" scanning folder")
                 // ls use case
@@ -148,7 +144,7 @@ fun main() {
                     i++
                 }
             } else {
-                i++;
+                i++
             }
         }
 
@@ -177,9 +173,9 @@ fun main() {
                 val regex = Regex("\\\$ cd (.*)")
                 val result = regex.find(command)
                 val (targetDir) = result!!.destructured
-                println(" changing directory ${targetDir}")
+                println(" changing directory $targetDir")
                 fileSystem.changeDirectory(targetDir)
-                i++;
+                i++
             } else if (command.contains("ls")) {
                 println(" scanning folder")
                 // ls use case
@@ -198,7 +194,7 @@ fun main() {
                     i++
                 }
             } else {
-                i++;
+                i++
             }
         }
 

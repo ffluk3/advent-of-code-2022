@@ -36,7 +36,7 @@ fun main() {
     }
 
     fun part1(input: List<String>): Int {
-        var totalIndex = 0;
+        var totalIndex = 0
         input.forEach {
             val startOfPacket = getStartOfPacketMarkerIndex(it)
 //            startOfPacket.println()
@@ -47,7 +47,7 @@ fun main() {
     }
 
     fun part2(input: List<String>): Int {
-        var totalIndex = 0;
+        var totalIndex = 0
         input.forEach {
             val startOfPacket = getStartOfMessageMarkerIndex(it)
 //            startOfPacket.println()

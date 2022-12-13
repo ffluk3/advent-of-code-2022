@@ -1,7 +1,7 @@
 
 fun main() {
     fun getElfCapacities(input: List<String>): List<Int> {
-        var allElfCapacities = mutableListOf<Int>();
+        var allElfCapacities = mutableListOf<Int>()
         var currentElfCapacity: Int = 0
         input.forEach {
             if (it.isEmpty()) {

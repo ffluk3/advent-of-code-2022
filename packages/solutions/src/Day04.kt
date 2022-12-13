@@ -3,7 +3,7 @@ class Range {
     var max: Int
 
     constructor(min: Int, max: Int) {
-        this.min = min;
+        this.min = min
         this.max = max
     }
 
@@ -21,9 +21,9 @@ fun main() {
 
 
     fun getRanges(line: String): List<Range> {
-        var ranges = mutableListOf<Range>();
+        var ranges = mutableListOf<Range>()
 
-        var rangeStrings = line.split(",");
+        var rangeStrings = line.split(",")
         rangeStrings.forEach {
             val bounds = it.split("-")
             ranges.add(Range(bounds[0].toInt(), bounds[1].toInt()))
@@ -33,7 +33,7 @@ fun main() {
     }
 
     fun part1(input: List<String>): Int {
-        var subsets = 0;
+        var subsets = 0
 
         input.forEach {
             val ranges = getRanges(it)
@@ -47,7 +47,7 @@ fun main() {
     }
 
     fun part2(input: List<String>): Int {
-        var subsetsThatOverlap = 0;
+        var subsetsThatOverlap = 0
 
         input.forEach {
             val ranges = getRanges(it)

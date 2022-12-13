@@ -5,7 +5,7 @@
 fun <T, E>runAdventOfCodeSuite(identifier: String, part1: (input: List<String>) -> T, expectedPart1Result: T, part2: (input: List<String>) -> E, expectedPart2Result: E) {
 
     val testData = readInput("${identifier}_test")
-    val realData = readInput("$identifier")
+    val realData = readInput(identifier)
 
     println("---- $identifier (PART 1) ----\n")
 
@@ -23,7 +23,7 @@ fun <T, E>runAdventOfCodeSuite(identifier: String, part1: (input: List<String>) 
     println("Real result: $realResult\n")
 
     if(expectedPart2Result == null) {
-        return;
+        return
     }
 
     println("---- $identifier (PART 2) ----\n")

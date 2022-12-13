@@ -32,10 +32,10 @@ fun main() {
     fun part1(input: List<String>): Int {
         var score = 0
         input.forEach {
-            val front = it.substring(0, it.length / 2);
+            val front = it.substring(0, it.length / 2)
             val back = it.substring(it.length / 2, it.length)
 
-            println(it + " " + front + " " + back)
+            println("$it $front $back")
             var scoreAdded = false
 
             front.forEach { it2 ->
@@ -44,7 +44,7 @@ fun main() {
                     scoreAdded = true
 
                     val scoreToAdd = getScore(it2)
-                    println(it2 + " " + scoreToAdd)
+                    println("$it2 $scoreToAdd")
                     score += scoreToAdd
 
                 }
@@ -59,9 +59,8 @@ fun main() {
         var score = 0
 
         for (i in 0 until input.size step 3) {
-            var commonLetters = listOf<Char>()
-            commonLetters = getCommonLetters(input[i], input[i + 1])
-            commonLetters = getCommonLetters(commonLetters, input[i + 2]);
+            var commonLetters = getCommonLetters(input[i], input[i + 1])
+            commonLetters = getCommonLetters(commonLetters, input[i + 2])
 
             score += getScore(commonLetters[0])
 

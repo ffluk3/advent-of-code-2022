@@ -78,7 +78,7 @@ fun main() {
     }
 
     fun part1(input: List<String>): Int {
-        var playerScore = 0;
+        var playerScore = 0
 
         input.forEach {
             val parts = it.split(" ")
@@ -90,8 +90,8 @@ fun main() {
             if(roundWasADraw(opponentMove,playerMove)) {
                 playerScore += 3
             }
-            else if(playerWonRound(enumValueOf<OpponentMove>(parts[0]), enumValueOf<PlayerMove>(parts[1]))) {
-                playerScore += 6;
+            else if(playerWonRound(enumValueOf(parts[0]), enumValueOf(parts[1]))) {
+                playerScore += 6
             }
         }
 
@@ -99,7 +99,7 @@ fun main() {
     }
 
     fun part2(input: List<String>): Int {
-        var playerScore = 0;
+        var playerScore = 0
 
         input.forEach {
             val parts = it.split(" ")
