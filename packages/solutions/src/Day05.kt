@@ -113,18 +113,9 @@ fun main() {
         return crateColumns.getTopOfColumns()
     }
 
-    // test if implementation meets criteria from the description, like:
-    val testInput = readInput("Day05_test")
-    part1(testInput).println()
-    check(part1(testInput) == "CMZ")
 
-    val input = readInput("Day05")
+    runAdventOfCodeSuite("Day05", ::part1, "CMZ", ::part2, "MCD")
 
-    part1(input).println()
-
-    part2(testInput).println()
-    check(part2(testInput) == "MCD")
-    part2(input).println()
 
 }
 

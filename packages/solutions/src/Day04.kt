@@ -60,13 +60,6 @@ fun main() {
         return subsetsThatOverlap
     }
 
-    // test if implementation meets criteria from the description, like:
-    val testInput = readInput("Day04_test")
-    check(part1(testInput) == 2)
+    runAdventOfCodeSuite("Day04", ::part1, 2, ::part2, 4)
 
-    val input = readInput("Day04")
-    part1(input).println()
-
-    check(part2(testInput) == 4)
-    part2(input).println()
 }

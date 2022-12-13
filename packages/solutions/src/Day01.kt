@@ -1,4 +1,3 @@
-import kotlin.math.max
 
 fun main() {
     fun getElfCapacities(input: List<String>): List<Int> {
@@ -35,15 +34,5 @@ fun main() {
         }
     }
 
-    val input = readInput("Day01")
-    val testInput = readInput("Day01_test")
-
-
-    part1(testInput).println()
-    check(part1(testInput) == 24000)
-    part1(input).println()
-
-    part2(testInput).println()
-    check(part2(testInput) == 45000)
-    part2(input).println()
+    runAdventOfCodeSuite("Day01", ::part1, 24000, ::part2, 45000)
 }

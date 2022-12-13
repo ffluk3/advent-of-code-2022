@@ -1,11 +1,14 @@
 import java.io.File
 import java.math.BigInteger
+import java.nio.file.Paths
 import java.security.MessageDigest
 
 /**
  * Reads lines from the given input txt file.
+ *
+ * TODO: resolve generally
  */
-fun readInput(name: String) = File("src", "$name.txt")
+fun readInput(name: String) = File("packages/solutions/src", "$name.txt")
     .readLines()
 
 /**
